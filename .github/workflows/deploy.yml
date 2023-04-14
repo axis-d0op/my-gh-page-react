@@ -2,11 +2,16 @@ name: Deploy examples to gh-pages
 
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
+    permissions:
+      pull-requests: write
+      issues: write
+      repository-projects: write
     steps:
       - uses: actions/checkout@v3
         with:
