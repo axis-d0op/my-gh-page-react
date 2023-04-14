@@ -1,6 +1,6 @@
 {
   "name": "train",
-  "private": true,
+  "private": false,
   "version": "0.0.0",
   "type": "module",
   "homepage": "https://axis-d0op.github.io/my-gh-page-react/",
