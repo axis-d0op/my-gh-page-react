@@ -5,7 +5,10 @@
 
 version: 2
 updates:
-  - package-ecosystem: "npm" 
+  - package-ecosystem: "npm" # See documentation for possible values
     directory: "/" # Location of package manifests
     schedule:
       interval: "daily"
+    allow:
+    # Allow both direct and indirect updates for all packages
+    - dependency-type: "all"
