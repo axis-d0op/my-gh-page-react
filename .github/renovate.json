@@ -1,0 +1,42 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:base"],
+  "dependencyDashboard": true,
+  "enabledManagers": ["npm"],
+  "lockFileMaintenance": {
+    "enabled": true
+  },
+  "npm": {
+    "commitMessagePrefix": "chore(deps): ",
+    "packageRules": [
+      {
+        "description": "fluent slot types don't work with @types/react v17, and fluent itself uses react 17",
+        "matchPackagePatterns": [
+          "^react",
+          "^@types/react",
+          "@testing-library/react"
+        ],
+        "enabled": false
+      }
+    ],
+    "major": {
+      "automerge": false,
+      "draftPR": true
+    },
+    "patch": {
+      "automerge": false
+    },
+    "minor": {
+      "automerge": false
+    },
+    "pin": {
+      "automerge": false
+    }
+  },
+  "rangeStrategy": "bump",
+  "updateNotScheduled": false,
+  "prConcurrentLimit": 10,
+  "minimumReleaseAge": "3 days",
+  "timezone": "Europe/Stockholm",
+  "rebaseWhen": "behind-base-branch"
+}
